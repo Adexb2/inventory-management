@@ -1,4 +1,7 @@
 /****** Script for SelectTopNRows command from SSMS  ******/
+USE ISYS4283309;
+GO
+CREATE VIEW view_inventory AS
 SELECT [id]
       ,[name]
       ,[description]
