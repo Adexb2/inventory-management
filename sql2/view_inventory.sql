@@ -1,4 +1,5 @@
 -- inventory = issued goods - purchased
+-- note this includes quantities for pending purchases
 
 -- make sure you're using your own database
 -- USE ISYS42833xx;
