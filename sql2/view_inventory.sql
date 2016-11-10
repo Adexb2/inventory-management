@@ -11,12 +11,12 @@ GO
 CREATE VIEW view_inventory AS
 SELECT [id]
       ,[name]
-      ,[description]
-      ,[image]
-      ,FORMAT(p.[price], 'C', 'en-us') AS 'price'
 	  ,COALESCE(gr.quantity,0) AS 'issued'
 	  ,COALESCE(pol.quantity,0) AS 'purchased'
 	  ,(COALESCE(gr.quantity,0) - COALESCE(pol.quantity,0)) AS 'quantity'
+      ,[description]
+      ,[image]
+      ,FORMAT(p.[price], 'C', 'en-us') AS 'price'
       ,[vendor]
   FROM [ISYS4283].[dbo].[products] p
   LEFT JOIN (
