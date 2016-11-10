@@ -17,12 +17,15 @@ namespace inventory_management
         public Form1()
         {
             InitializeComponent();
+            view_inventory();
         }
 
         private void issueGoodsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            issue_goods_form ig = new issue_goods_form();
+            int product_id = (int)dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells["id"].Value;
+            issue_goods_form ig = new issue_goods_form(product_id);
             ig.ShowDialog();
+            view_inventory();
         }
 
         private void createProductToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,7 +40,7 @@ namespace inventory_management
             ep.ShowDialog();
         }
 
-        private void viewInventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        protected void view_inventory()
         {
             // connection string
             string conStr = ConfigurationManager.ConnectionStrings["ISYS4283"].ConnectionString;
@@ -75,6 +78,11 @@ namespace inventory_management
             {
                 con.Close();
             }
+        }
+
+        private void viewInventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            view_inventory();
         }
     }
 }
