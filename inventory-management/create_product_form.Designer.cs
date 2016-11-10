@@ -34,7 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbDescription = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.numPrice = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -87,20 +88,30 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Price";
             // 
-            // tbPrice
+            // numPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(13, 65);
-            this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(100, 20);
-            this.tbPrice.TabIndex = 5;
+            this.numPrice.Location = new System.Drawing.Point(13, 66);
+            this.numPrice.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPrice.Name = "numPrice";
+            this.numPrice.Size = new System.Drawing.Size(100, 20);
+            this.numPrice.TabIndex = 7;
+            this.numPrice.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // create_product_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.numPrice);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbDescription);
             this.Controls.Add(this.label1);
@@ -108,6 +119,7 @@
             this.Controls.Add(this.button1);
             this.Name = "create_product_form";
             this.Text = "create_product_form";
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,6 +133,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbDescription;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbPrice;
+        private System.Windows.Forms.NumericUpDown numPrice;
     }
 }
