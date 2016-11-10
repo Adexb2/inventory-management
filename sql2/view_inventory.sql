@@ -11,9 +11,13 @@ GO
 CREATE VIEW view_inventory AS
 SELECT [id]
       ,[name]
-	  ,COALESCE(gr.quantity,0) AS 'issued'
-	  ,COALESCE(pol.quantity,0) AS 'purchased'
-	  ,(COALESCE(gr.quantity,0) - COALESCE(pol.quantity,0)) AS 'quantity'
+	  -- format comma separated integers
+	  -- http://stackoverflow.com/a/27638248/4233593
+	  -- NULL coalescer returns first non-null value
+	  -- http://stackoverflow.com/a/13366500/4233593
+	  ,FORMAT(COALESCE(gr.quantity,0), '#,0') AS 'issued'
+	  ,FORMAT(COALESCE(pol.quantity,0), '#,0') AS 'purchased'
+	  ,FORMAT(COALESCE(gr.quantity,0) - COALESCE(pol.quantity,0), '#,0') AS 'quantity'
       ,[description]
       ,[image]
       ,FORMAT(p.[price], 'C', 'en-us') AS 'price'
