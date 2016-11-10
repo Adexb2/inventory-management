@@ -13,7 +13,7 @@ SELECT [id]
       ,[name]
       ,[description]
       ,[image]
-      ,[price]
+      ,FORMAT(p.[price], 'C', 'en-us') AS 'price'
 	  ,COALESCE(gr.quantity,0) AS 'issued'
 	  ,COALESCE(pol.quantity,0) AS 'purchased'
 	  ,(COALESCE(gr.quantity,0) - COALESCE(pol.quantity,0)) AS 'quantity'
