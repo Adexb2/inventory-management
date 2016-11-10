@@ -1,6 +1,12 @@
-/****** Script for SelectTopNRows command from SSMS  ******/
+-- inventory = issued goods - purchased
+
 USE ISYS4283309;
 GO
+
+IF OBJECT_ID('view_inventory', 'V') IS NOT NULL
+    DROP VIEW view_inventory;
+GO
+
 CREATE VIEW view_inventory AS
 SELECT [id]
       ,[name]
@@ -28,5 +34,3 @@ SELECT [id]
   ) pol
     ON p.id = pol.product
   WHERE [vendor] = 'ISYS4283309'
-  
-  -- inventory = issued goods - purchased
