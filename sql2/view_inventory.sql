@@ -1,7 +1,8 @@
 -- inventory = issued goods - purchased
 
-USE ISYS4283309;
-GO
+-- make sure you're using your own database
+-- USE ISYS42833xx;
+-- GO
 
 IF OBJECT_ID('view_inventory', 'V') IS NOT NULL
     DROP VIEW view_inventory;
@@ -13,10 +14,10 @@ SELECT [id]
       ,[description]
       ,[image]
       ,[price]
-      ,[vendor]
 	  ,COALESCE(gr.quantity,0) AS 'issued'
 	  ,COALESCE(pol.quantity,0) AS 'purchased'
 	  ,(COALESCE(gr.quantity,0) - COALESCE(pol.quantity,0)) AS 'quantity'
+      ,[vendor]
   FROM [ISYS4283].[dbo].[products] p
   LEFT JOIN (
 	  SELECT
@@ -33,4 +34,4 @@ SELECT [id]
 	  GROUP BY [product]
   ) pol
     ON p.id = pol.product
-  WHERE [vendor] = 'ISYS4283309'
+  WHERE [vendor] = SYSTEM_USER
