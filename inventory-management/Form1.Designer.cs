@@ -33,6 +33,7 @@
             this.issueGoodsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.editProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +43,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewInventoryToolStripMenuItem,
             this.issueGoodsToolStripMenuItem,
-            this.createProductToolStripMenuItem});
+            this.createProductToolStripMenuItem,
+            this.editProductToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(769, 24);
@@ -76,6 +78,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(769, 524);
             this.dataGridView1.TabIndex = 1;
             // 
+            // editProductToolStripMenuItem
+            // 
+            this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
+            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.editProductToolStripMenuItem.Text = "Edit Product";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,6 +109,7 @@
         private System.Windows.Forms.ToolStripMenuItem issueGoodsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createProductToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem editProductToolStripMenuItem;
     }
 }
 
