@@ -56,6 +56,7 @@
             this.viewInventoryToolStripMenuItem.Name = "viewInventoryToolStripMenuItem";
             this.viewInventoryToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.viewInventoryToolStripMenuItem.Text = "View Inventory";
+            this.viewInventoryToolStripMenuItem.Click += new System.EventHandler(this.viewInventoryToolStripMenuItem_Click);
             // 
             // issueGoodsToolStripMenuItem
             // 
