@@ -18,20 +18,18 @@ SELECT [id]
       ,[image]
       ,FORMAT(p.[price], 'C', 'en-us') AS 'price'
       ,[vendor]
-  FROM [ISYS4283].[dbo].[products] p
-  LEFT JOIN (
-	  SELECT
-		  [product]
-		  ,SUM([quantity]) AS 'quantity'
-	  FROM [ISYS4283].[dbo].[goods_receipts]
-	  GROUP BY [product] 
-  ) gr
-    ON p.id = gr.product
-  LEFT JOIN (
-	SELECT [product]
-		  ,SUM([quantity]) AS 'quantity'
-	  FROM [ISYS4283].[dbo].[po_lines]
-	  GROUP BY [product]
-  ) pol
-    ON p.id = pol.product
-  WHERE [vendor] = SYSTEM_USER
+FROM [ISYS4283].[dbo].[products] p
+
+LEFT JOIN (
+	SELECT [product] ,SUM([quantity]) AS 'quantity'
+	FROM [ISYS4283].[dbo].[goods_receipts]
+	GROUP BY [product] 
+) gr ON p.id = gr.product
+
+LEFT JOIN (
+	SELECT [product] ,SUM([quantity]) AS 'quantity'
+	FROM [ISYS4283].[dbo].[po_lines]
+	GROUP BY [product]
+) pol ON p.id = pol.product
+
+WHERE [vendor] = SYSTEM_USER
