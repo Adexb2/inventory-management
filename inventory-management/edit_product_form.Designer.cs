@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.tbPrice = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.numPrice = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -45,13 +46,6 @@
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "Price";
-            // 
-            // tbPrice
-            // 
-            this.tbPrice.Location = new System.Drawing.Point(12, 64);
-            this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(100, 20);
-            this.tbPrice.TabIndex = 12;
             // 
             // label2
             // 
@@ -94,13 +88,30 @@
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // numPrice
+            // 
+            this.numPrice.Location = new System.Drawing.Point(12, 65);
+            this.numPrice.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPrice.Name = "numPrice";
+            this.numPrice.Size = new System.Drawing.Size(100, 20);
+            this.numPrice.TabIndex = 14;
+            this.numPrice.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // edit_product_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.numPrice);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbDescription);
             this.Controls.Add(this.label1);
@@ -108,6 +119,7 @@
             this.Controls.Add(this.button1);
             this.Name = "edit_product_form";
             this.Text = "edit_product_form";
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,11 +128,11 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbDescription;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown numPrice;
     }
 }
