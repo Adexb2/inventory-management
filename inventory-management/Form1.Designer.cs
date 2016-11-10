@@ -32,8 +32,8 @@
             this.viewInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.issueGoodsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.editProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -62,12 +62,21 @@
             this.issueGoodsToolStripMenuItem.Name = "issueGoodsToolStripMenuItem";
             this.issueGoodsToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.issueGoodsToolStripMenuItem.Text = "Issue Goods";
+            this.issueGoodsToolStripMenuItem.Click += new System.EventHandler(this.issueGoodsToolStripMenuItem_Click);
             // 
             // createProductToolStripMenuItem
             // 
             this.createProductToolStripMenuItem.Name = "createProductToolStripMenuItem";
             this.createProductToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.createProductToolStripMenuItem.Text = "Create Product";
+            this.createProductToolStripMenuItem.Click += new System.EventHandler(this.createProductToolStripMenuItem_Click);
+            // 
+            // editProductToolStripMenuItem
+            // 
+            this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
+            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.editProductToolStripMenuItem.Text = "Edit Product";
+            this.editProductToolStripMenuItem.Click += new System.EventHandler(this.editProductToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -77,12 +86,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(769, 524);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // editProductToolStripMenuItem
-            // 
-            this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
-            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.editProductToolStripMenuItem.Text = "Edit Product";
             // 
             // Form1
             // 
