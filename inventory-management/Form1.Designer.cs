@@ -32,6 +32,7 @@
             this.viewInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.issueGoodsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -42,7 +43,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewInventoryToolStripMenuItem,
             this.issueGoodsToolStripMenuItem,
-            this.createProductToolStripMenuItem});
+            this.createProductToolStripMenuItem,
+            this.editProductToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(769, 24);
@@ -60,12 +62,21 @@
             this.issueGoodsToolStripMenuItem.Name = "issueGoodsToolStripMenuItem";
             this.issueGoodsToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.issueGoodsToolStripMenuItem.Text = "Issue Goods";
+            this.issueGoodsToolStripMenuItem.Click += new System.EventHandler(this.issueGoodsToolStripMenuItem_Click);
             // 
             // createProductToolStripMenuItem
             // 
             this.createProductToolStripMenuItem.Name = "createProductToolStripMenuItem";
             this.createProductToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.createProductToolStripMenuItem.Text = "Create Product";
+            this.createProductToolStripMenuItem.Click += new System.EventHandler(this.createProductToolStripMenuItem_Click);
+            // 
+            // editProductToolStripMenuItem
+            // 
+            this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
+            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.editProductToolStripMenuItem.Text = "Edit Product";
+            this.editProductToolStripMenuItem.Click += new System.EventHandler(this.editProductToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -101,6 +112,7 @@
         private System.Windows.Forms.ToolStripMenuItem issueGoodsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createProductToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem editProductToolStripMenuItem;
     }
 }
 
