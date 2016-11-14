@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,6 +53,12 @@
     <Compile Include="create_product_form.Designer.cs">
       <DependentUpon>create_product_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="edit_product_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_product_form.Designer.cs">
+      <DependentUpon>edit_product_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="create_product_form.resx">
       <DependentUpon>create_product_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_product_form.resx">
+      <DependentUpon>edit_product_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
